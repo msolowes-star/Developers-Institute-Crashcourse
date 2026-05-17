@@ -1,0 +1,22 @@
+list1 = [("name", "Elie"), ("job", "Instructor")]
+result = dict(list1)
+print(result)  # {'name': 'Elie', 'job': 'Instructor'}
+
+abbrevs = ["CA", "NJ", "RI"]
+states = ["California", "New Jersey", "Rhode Island"]
+result = dict(zip(abbrevs, states))
+print(result)  # {'CA': 'California', 'NJ': 'New Jersey', 'RI': 'Rhode Island'}
+
+result = {v: 0 for v in 'aeiou'}
+print(result)  # {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+
+import string
+result = {i+1: ch for i, ch in enumerate(string.ascii_uppercase)}
+print(result)  # {1: 'A', 2: 'B', ..., 26: 'Z'}
+
+s = "awesome sauce"
+vowel_count = {v: 0 for v in 'aeiou'}
+for ch in s:
+    if ch in vowel_count:
+        vowel_count[ch] += 1
+print(vowel_count)  # {'a': 2, 'e': 3, 'i': 0, 'o': 1, 'u': 1}
